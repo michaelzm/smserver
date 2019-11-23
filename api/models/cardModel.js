@@ -20,6 +20,19 @@ var CardSchema = new Schema({
   next_review_date: {
     type: Date,
     default: 0
+  },
+  //0 to 1 value
+  calculation_difficulty: {
+    type: Number,
+    default: 0.3
+  },
+  //days until next review
+  calculation_days_between_reviews: {
+    type: Number,
+    default: 1
+  },
+  calculation_last_reviewed_date: {
+    type: Number
   }
 });
 
