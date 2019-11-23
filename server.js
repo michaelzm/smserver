@@ -23,14 +23,12 @@ app.use(cors());
 
 var routes = require("./api/routes/smserverroutes"); //importing route
 routes(app); //register the route
-console.log(routes);
 
 app.listen(port);
 
 app.use(function(req, res) {
   res.status(404).send({
-    url: req.originalUrl + "THIS IS THE INDEX SITE"
+    url: req.originalUrl + " not found!"
   });
 });
-
 console.log("RESTful API server started on: " + port);

@@ -13,9 +13,13 @@ var CardSchema = new Schema({
     type: Number,
     default: 0
   },
-  Created_date: {
+  created_date: {
     type: Date,
     default: Date.now
+  },
+  next_review_date: {
+    type: Date,
+    default: 0
   }
 });
 
