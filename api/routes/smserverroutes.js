@@ -1,6 +1,7 @@
 "use strict";
 module.exports = function(app) {
   var card = require("../controllers/cardController");
+  var subject = require("../controllers/subjectController");
 
   app
     .route("/collection")
@@ -17,4 +18,11 @@ module.exports = function(app) {
     .get(card.get_cards_matching_review);
 
   app.route("/today").get(card.get_learn_today_card);
+
+
+  app
+  .route("/subject")
+  .get(subject.get_all_subjects)
+  .post(subject.create_a_subject);
+  
 };
